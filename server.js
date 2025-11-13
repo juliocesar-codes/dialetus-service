@@ -18,9 +18,10 @@ app.set('port', config.port)
 
 app.use(routes())
 
-app.listen(config.port, () => {
-  const port = app.get('port')
-  logger.info(`Dialetus API server is listening on port ${port} (http://localhost:${config.port})`)
+const port = 8080
+
+app.listen(port, () => {
+    logger.info(`Dialetus API server is listening on port 8080 (http://localhost:8080)`)
 })
 
 module.exports = app
